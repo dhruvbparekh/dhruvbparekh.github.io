@@ -1,216 +1,375 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dhruv Bhavesh Parekh</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <div class="container">
-                <h1 class="logo">Dhruv Bhavesh Parekh</h1>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="resume.pdf" download>Resume</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+:root {
+    --primary: #BF5700; /* UT Austin Burnt Orange */
+    --dark: #1a1a1a;
+    --light: #f4f4f4;
+    --white: #ffffff;
+    --gray: #666;
+    --shadow: 0 4px 15px rgba(0,0,0,0.08);
+    --border-radius: 12px;
+}
 
-    <section id="hero">
-        <div class="container">
-            <div class="hero-content">
-                <img src="photo.jpeg" alt="Dhruv Bhavesh Parekh" class="profile-photo">
-                <h1>Dhruv Bhavesh Parekh</h1>
-                <p class="subtitle">Graduate Student | Electrical & Computer Engineering</p>
-                <p class="university">University of Texas at Austin</p>
-                <div class="contact-links">
-                    <a href="mailto:dhruvparekh@my.utexas.edu"><i class="fas fa-envelope"></i> Email</a>
-                    <a href="https://linkedin.com/in/dhruv-b-parekh" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                </div>
-            </div>
-        </div>
-    </section>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
 
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I am a graduate student pursuing my Master of Science in Electrical & Computer Engineering at the University of Texas at Austin, specializing in Power Electronics and Power Systems. With a strong academic background from IIT Gandhinagar and hands-on experience in motor control, grid-forming inverters, and power converter design, I am passionate about advancing sustainable energy technologies.</p>
-        </div>
-    </section>
+body {
+    background-color: #fafafa;
+    color: var(--dark);
+    line-height: 1.6;
+}
 
-    <section id="education">
-        <div class="container">
-            <h2>Education</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>University of Texas at Austin</h3>
-                        <p class="degree">MSE | Electrical & Computer Engineering</p>
-                        <p class="specialization">Power Electronics and Power Systems</p>
-                        <p class="gpa">GPA: 4.0/4.0</p>
-                        <p class="date">Aug '24 - May '26</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Indian Institute of Technology Gandhinagar</h3>
-                        <p class="degree">B.Tech | Electrical Engineering</p>
-                        <p class="gpa">GPA: 9.26/10</p>
-                        <p class="date">Aug '20 - May '24</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-    <section id="experience">
-        <div class="container">
-            <h2>Work Experience</h2>
-            <div class="experience-grid">
-                <div class="experience-card">
-                    <h3>Texas Instruments</h3>
-                    <p class="position">Systems Engineering Intern | ASM - AUTO</p>
-                    <p class="date">Jun '25 - Aug '25</p>
-                    <ul>
-                        <li>Motor-control algorithm design, validation in MATLAB Simulink and implementation on F29 series micro-controller.</li>
-                        <li>Test-bed design for comparative evaluation versus SVPWM for various test conditions.</li>
-                    </ul>
-                </div>
+/* Header & Nav */
+header {
+    background: var(--white);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-                <div class="experience-card">
-                    <h3>University of Texas at Austin</h3>
-                    <p class="position">Graduate Research Assistant | Prof. Brian Johnson</p>
-                    <p class="date">Jan '25 - Present</p>
-                    <ul>
-                        <li>Designing a GFM verification testbed experiment to run a frequency sweep test on any device to verify functioning.</li>
-                    </ul>
-                </div>
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-                <div class="experience-card">
-                    <h3>MITACS Globalink | University of Waterloo</h3>
-                    <p class="position">Research Intern | Prof. Sahar Azad</p>
-                    <p class="date">May '23 - Jul '23</p>
-                    <ul>
-                        <li>Designed & implemented various control loops for Voltage-Sourced-Converters based Grid Forming Inverters in PSCAD.</li>
-                        <li>Simulated and ran comparative analysis of droop control methods based on transient time and the steady state error.</li>
-                    </ul>
-                </div>
+.logo {
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -1px;
+}
 
-                <div class="experience-card">
-                    <h3>Indian Institute of Technology Bombay</h3>
-                    <p class="position">Research Intern | Prof. Zakir Rather</p>
-                    <p class="date">May '22 - Jul '22</p>
-                    <ul>
-                        <li>Collaborated on a pilot project to develop and deploy Street-Pole based Charging for Electric Vehicles in IIT Bombay.</li>
-                        <li>Designed and developed an Arduino based circuit to ensure Pilot and Proximity checks for a J-1772 based EVSE.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
 
-    <section id="projects">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>PCB Design for a Boost Converter and Implementation of Control</h3>
-                    <p class="project-type">Course Project | Prof. Brian Johnson, Prof. Alex Hanson</p>
-                    <p class="project-location">University of Texas at Austin</p>
-                    <p class="date">Aug '24 - Present</p>
-                    <ul>
-                        <li>Completely designed a boost converter circuit, involving device selections, inductor design, and PCB layout.</li>
-                        <li>Experimentally verified the design and achieved one of the highest efficiency in class (98 Percent).</li>
-                        <li>Implementation of peak-current control and tested dynamic performance.</li>
-                    </ul>
-                </div>
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.3s;
+}
 
-                <div class="project-card">
-                    <h3>Comparison of Different Modulation Techniques for an Inverter</h3>
-                    <p class="project-type">Research Project | Prof. Ragavan K</p>
-                    <p class="project-location">IIT Gandhinagar</p>
-                    <p class="date">Jan '24 - Apr '24</p>
-                    <ul>
-                        <li>Implemented various PWM Techniques on STM aimed at reducing Total Harmonic Distortion in Inverters.</li>
-                        <li>Conducted Experimental and simulation based comparison to determine most effective PWM Technique.</li>
-                    </ul>
-                </div>
+.nav-links a:hover {
+    color: var(--primary);
+}
 
-                <div class="project-card">
-                    <h3>Gate Driver Circuit Design of a Synchronous Reluctance Motor</h3>
-                    <p class="project-type">Research Project | Prof. Ragavan K</p>
-                    <p class="project-location">Indian Institute of Technology Gandhinagar</p>
-                    <p class="date">Jan '23 - Apr '23</p>
-                    <ul>
-                        <li>Designed and developed a gate-driver circuit for IGBTs being used for the inverter of a Synchronous Reluctance Motor.</li>
-                        <li>Designed the PCB Circuit using ISO-5852S as the Isolated Gate Driver, for the experimental verification of the motor.</li>
-                    </ul>
-                </div>
+/* Hero Section */
+#hero {
+    padding: 60px 0;
+    text-align: center;
+    background: var(--white);
+    border-bottom: 1px solid #eee;
+}
 
-                <div class="project-card">
-                    <h3>Building of a Surveillance Car</h3>
-                    <p class="project-type">Course Project | Prof. Jhuma Saha</p>
-                    <p class="project-location">Indian Institute of Technology Gandhinagar</p>
-                    <p class="date">Jan '23 - Apr '23</p>
-                    <ul>
-                        <li>Built a controllable Surveillance Car using STM 32 micro controller, with the ability to report data like temperature and pressure at a particular location (coordinates provided with data), along with live camera feed and control access.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--white);
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+}
 
-    <section id="achievements">
-        <div class="container">
-            <h2>Academic Achievements</h2>
-            <div class="achievement-card">
-                <i class="fas fa-trophy"></i>
-                <p>Institute Gold Medal for the Highest Cumulative Performance Index in Electrical Engineering Discipline at IIT Gandhinagar</p>
-            </div>
-        </div>
-    </section>
+#hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
 
-    <section id="skills">
-        <div class="container">
-            <h2>Tools & Frameworks</h2>
-            <div class="skills-container">
-                <span class="skill-tag">PSCAD</span>
-                <span class="skill-tag">MATLAB</span>
-                <span class="skill-tag">Simulink</span>
-                <span class="skill-tag">LaTeX</span>
-                <span class="skill-tag">LTSpice</span>
-                <span class="skill-tag">Arduino</span>
-                <span class="skill-tag">Verilog</span>
-                <span class="skill-tag">LabVIEW</span>
-                <span class="skill-tag">KiCad</span>
-                <span class="skill-tag">PLECS</span>
-                <span class="skill-tag">Code Composer Studio</span>
-                <span class="skill-tag">TCAD</span>
-                <span class="skill-tag">Cadence</span>
-            </div>
-        </div>
-    </section>
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--gray);
+}
 
+.university {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 25px;
+}
 
+/* Contact Bar - No lists */
+.contact-bar {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Dhruv Bhavesh Parekh. All rights reserved.</p>
-            <div class="footer-links">
-                <a href="mailto:dhruvparekh@my.utexas.edu"><i class="fas fa-envelope"></i></a>
-                <a href="https://linkedin.com/in/dhruv-b-parekh" target="_blank"><i class="fab fa-linkedin"></i></a>
-            </div>
-        </div>
-    </footer>
+.contact-pill {
+    text-decoration: none;
+    color: var(--dark);
+    padding: 8px 16px;
+    background: #f0f0f0;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
-    <script src="script.js"></script>
-</body>
-</html>
+.contact-pill:hover {
+    background: #e0e0e0;
+    transform: translateY(-2px);
+}
+
+.contact-pill.highlight {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.contact-pill.highlight:hover {
+    background: #a34a00;
+}
+
+/* Section Common */
+section {
+    padding: 60px 0;
+}
+
+.section-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60%;
+    height: 4px;
+    background: var(--primary);
+    margin-top: 5px;
+    border-radius: 2px;
+}
+
+/* Education - Grid Cards */
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.edu-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(0,0,0,0.03);
+}
+
+.edu-header {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.icon-bg {
+    font-size: 1.5rem;
+    color: var(--primary);
+    background: rgba(191, 87, 0, 0.1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.edu-header h3 {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+}
+
+.date-badge {
+    font-size: 0.8rem;
+    background: #eee;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: #666;
+}
+
+.achievement-banner {
+    background: linear-gradient(45deg, #FFD700, #FDB931);
+    color: #4a3b00;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.stat-box {
+    margin-top: 15px;
+    border-top: 1px solid #eee;
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+/* Experience - Feed Style (No Bullets) */
+.timeline-feed {
+    border-left: 3px solid #eee;
+    padding-left: 30px;
+    margin-left: 10px;
+}
+
+.feed-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.feed-marker {
+    position: absolute;
+    left: -38px; /* Align with border */
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    border-radius: 50%;
+    border: 3px solid #fff;
+    box-shadow: 0 0 0 1px #eee;
+}
+
+.job-header {
+    margin-bottom: 12px;
+}
+
+.job-header h3 {
+    font-size: 1.2rem;
+}
+
+.job-header .role {
+    display: block;
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.job-header .time {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* Narrative Text - Replacing Bullets */
+.job-narrative p {
+    margin-bottom: 10px;
+    background: var(--white);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid rgba(191, 87, 0, 0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+}
+
+.job-narrative p strong {
+    color: var(--primary);
+}
+
+/* Projects Masonry */
+.projects-masonry {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background: var(--white);
+    border-radius: var(--border-radius);
+    padding: 25px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.card-top h3 {
+    font-size: 1.1rem;
+    max-width: 70%;
+}
+
+.tag {
+    font-size: 0.7rem;
+    background: var(--dark);
+    color: var(--white);
+    padding: 4px 8px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.prof-ref {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Action Blocks - Creative replacement for bullets in projects */
+.action-block {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 12px;
+    align-items: baseline;
+}
+
+.action-block i {
+    color: var(--primary);
+    font-size: 0.9rem;
+    min-width: 20px;
+}
+
+.action-block span {
+    font-size: 0.95rem;
+    color: #444;
+}
+
+/* Skills */
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.skill-pill {
+    background: var(--white);
+    border: 1px solid #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #555;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #888;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
