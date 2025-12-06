@@ -181,7 +181,6 @@
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
             border: 1px solid rgba(0,0,0,0.03);
-            /* Flex properties to force alignment */
             display: flex;
             flex-direction: column;
             height: 100%;
@@ -194,7 +193,6 @@
         }
 
         .edu-body {
-            /* Flex grow allows this section to fill space, pushing stat-box down */
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -238,10 +236,9 @@
         }
 
         .stat-box {
-            /* This pushes the GPA box to the very bottom of the card */
             margin-top: auto; 
             border-top: 1px solid #eee;
-            padding-top: 15px; /* Increased padding slightly */
+            padding-top: 15px;
             display: flex;
             justify-content: space-between;
             font-weight: 600;
@@ -294,18 +291,29 @@
             color: #999;
         }
 
-        /* Narrative Text */
-        .job-narrative p {
-            margin-bottom: 10px;
-            background: var(--white);
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 4px solid rgba(191, 87, 0, 0.2);
-            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        /* Concise Focus Tags (New Style) */
+        .focus-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
-        .job-narrative p strong {
+        .focus-tag {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            color: #444;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        }
+
+        .focus-tag i {
             color: var(--primary);
+            font-size: 0.8rem;
         }
 
         /* Projects Masonry */
@@ -354,25 +362,6 @@
             margin-bottom: 20px;
             border-bottom: 1px solid #eee;
             padding-bottom: 10px;
-        }
-
-        /* Action Blocks */
-        .action-block {
-            display: flex;
-            gap: 15px;
-            margin-bottom: 12px;
-            align-items: baseline;
-        }
-
-        .action-block i {
-            color: var(--primary);
-            font-size: 0.9rem;
-            min-width: 20px;
-        }
-
-        .action-block span {
-            font-size: 0.95rem;
-            color: #444;
         }
 
         /* Skills */
@@ -493,9 +482,9 @@
                             <span class="role">Systems Engineering Intern | ASM - AUTO</span>
                             <span class="time">Jun '25 - Aug '25</span>
                         </div>
-                        <div class="job-narrative">
-                            <p>Spearheaded <strong>motor-control algorithm design</strong> and validation within MATLAB Simulink, successfully implementing solutions on F29 series micro-controllers.</p>
-                            <p>Engineered a robust <strong>test-bed</strong> for comparative evaluation against SVPWM, covering a wide range of test conditions to ensure system reliability.</p>
+                        <div class="focus-grid">
+                            <div class="focus-tag"><i class="fas fa-microchip"></i> Motor Control Algorithms</div>
+                            <div class="focus-tag"><i class="fas fa-tools"></i> Testbed Design & Prototyping</div>
                         </div>
                     </div>
                 </div>
@@ -508,8 +497,9 @@
                             <span class="role">Graduate Research Assistant | Prof. Brian Johnson</span>
                             <span class="time">Jan '25 - Present</span>
                         </div>
-                        <div class="job-narrative">
-                            <p>Currently designing a comprehensive <strong>GFM verification testbed experiment</strong> capable of executing frequency sweep tests on diverse devices to rigorously verify functionality.</p>
+                        <div class="focus-grid">
+                            <div class="focus-tag"><i class="fas fa-wave-square"></i> GFM Verification Testbed</div>
+                            <div class="focus-tag"><i class="fas fa-vial"></i> Frequency Sweep Testing</div>
                         </div>
                     </div>
                 </div>
@@ -518,13 +508,13 @@
                     <div class="feed-marker"></div>
                     <div class="feed-content">
                         <div class="job-header">
-                            <h3>MITACS Globalink | Univ. of Waterloo</h3>
+                            <h3>MITACS Globalink | University of Waterloo</h3>
                             <span class="role">Research Intern | Prof. Sahar Azad</span>
                             <span class="time">May '23 - Jul '23</span>
                         </div>
-                        <div class="job-narrative">
-                            <p>Designed and implemented complex control loops for <strong>Voltage-Sourced-Converters</strong> based Grid Forming Inverters in PSCAD.</p>
-                            <p>Executed simulations to run comparative analysis of <strong>droop control methods</strong>, optimizing for transient time and steady-state error.</p>
+                        <div class="focus-grid">
+                            <div class="focus-tag"><i class="fas fa-project-diagram"></i> GFM Control Loops</div>
+                            <div class="focus-tag"><i class="fas fa-chart-bar"></i> Droop Control Analysis</div>
                         </div>
                     </div>
                 </div>
@@ -537,9 +527,9 @@
                             <span class="role">Research Intern | Prof. Zakir Rather</span>
                             <span class="time">May '22 - Jul '22</span>
                         </div>
-                        <div class="job-narrative">
-                            <p>Collaborated on a pilot project to deploy <strong>Street-Pole based Charging</strong> for EVs.</p>
-                            <p>Developed an <strong>Arduino-based circuit</strong> to handle Pilot and Proximity checks for J-1772 based EVSE.</p>
+                        <div class="focus-grid">
+                            <div class="focus-tag"><i class="fas fa-charging-station"></i> EV Charging</div>
+                            <div class="focus-tag"><i class="fas fa-bolt"></i> J-1772 Pilot & Proximity Circuit</div>
                         </div>
                     </div>
                 </div>
@@ -553,111 +543,77 @@
             <h2 class="section-title">Key Projects</h2>
             <div class="projects-masonry">
                 
-                <div class="project-card">
-                    <div class="card-top">
-                        <h3>2-Stage Miller Compensated OTA Design</h3>
-                        <span class="tag">Analog IC Design</span>
-                    </div>
-                    <p class="prof-ref">Prof. Yaoyao Jia | UT Austin | Aug '25 - Present</p>
-                    <div class="card-desc">
-                        <div class="action-block">
-                            <i class="fas fa-microchip"></i>
-                            <span>Complete design of a 2-stage OTA meeting strict requirements for output swing, DC gain, and transient performance.</span>
-                        </div>
-                        <div class="action-block">
-                            <i class="fas fa-wave-square"></i>
-                            <span>Conducted Cadence simulations to verify design stability under various step changes in input.</span>
-                        </div>
-                    </div>
-                </div>
+
 
                 <div class="project-card">
                     <div class="card-top">
                         <h3>MPC of a Boost Converter</h3>
                         <span class="tag">Optimal Control</span>
                     </div>
-                    <p class="prof-ref">Prof. Sandeep Chinchali | UT Austin | Aug '25 - Dec '25</p>
-                    <div class="card-desc">
-                        <div class="action-block">
-                            <i class="fas fa-chart-line"></i>
-                            <span>Comparative analysis of LQR, iLQR, and QP in MPC against standard PID Control via PLECS simulation.</span>
-                        </div>
+                    <p class="prof-ref">Prof. Sandeep Chinchali | UT Austin</p>
+                    <div class="focus-grid">
+                        <div class="focus-tag"><i class="fas fa-balance-scale"></i> LQR, iLQR, QP vs PID</div>
+                        <div class="focus-tag"><i class="fas fa-shield-alt"></i> Adaptive MPC Implementation for robustness</div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="card-top">
-                        <h3>Boost Converter PCB Design & Control</h3>
+                        <h3>2-Stage Miller OTA Design</h3>
+                        <span class="tag">Analog IC</span>
+                    </div>
+                    <p class="prof-ref">Prof. Yaoyao Jia | UT Austin</p>
+                    <div class="focus-grid">
+                        <div class="focus-tag"><i class="fas fa-pencil-ruler"></i> 2-Stage OTA Design</div>
+                        <div class="focus-tag"><i class="fas fa-check-circle"></i> Cadence Stability Verification</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <h3>Boost Converter PCB & Control</h3>
                         <span class="tag">Power Electronics</span>
                     </div>
-                    <p class="prof-ref">Prof. Brian Johnson | UT Austin | Aug '24 - Present</p>
-                    <div class="card-desc">
-                        <div class="action-block">
-                            <i class="fas fa-pencil-ruler"></i>
-                            <span>End-to-end design involving device selection, inductor design, and PCB layout.</span>
-                        </div>
-                        <div class="action-block">
-                            <i class="fas fa-bolt"></i>
-                            <span>Achieved <strong>98% efficiency</strong> (highest in class) with minimized converter size.</span>
-                        </div>
-                        <div class="action-block">
-                            <i class="fas fa-tachometer-alt"></i>
-                            <span>Implemented Peak-Curve control and tested dynamic performance under load changes.</span>
-                        </div>
+                    <p class="prof-ref">Prof. Brian Johnson, Prof. Alex Hanson | UT Austin</p>
+                    <div class="focus-grid">
+                        <div class="focus-tag"><i class="fas fa-layer-group"></i> End-to-End PCB Design, Inductor Design</div>
+                        <div class="focus-tag"><i class="fas fa-tachometer-alt"></i> 98% Efficiency & Peak-Current Control</div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="card-top">
                         <h3>Inverter Modulation Techniques</h3>
-                        <span class="tag">Embedded Systems</span>
+                        <span class="tag">Embedded</span>
                     </div>
-                    <p class="prof-ref">Prof. Ragavan K | IIT Gandhinagar | Jan '24 - Apr '24</p>
-                    <div class="card-desc">
-                        <div class="action-block">
-                            <i class="fas fa-code-branch"></i>
-                            <span>Implemented various PWM Techniques on STM32 to reduce Total Harmonic Distortion (THD).</span>
-                        </div>
-                        <div class="action-block">
-                            <i class="fas fa-flask"></i>
-                            <span>Conducted experimental and simulation-based comparisons to isolate the most effective PWM technique.</span>
-                        </div>
+                    <p class="prof-ref">Prof. Ragavan K | IIT Gandhinagar</p>
+                    <div class="focus-grid">
+                        <div class="focus-tag"><i class="fas fa-code"></i> PWM on STM32</div>
+                        <div class="focus-tag"><i class="fas fa-wave-square"></i> THD Reduction Analysis</div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="card-top">
-                        <h3>Gate Driver Circuit for SynRM</h3>
-                        <span class="tag">Hardware Design</span>
+                        <h3>Gate Driver for SynRM</h3>
+                        <span class="tag">Hardware</span>
                     </div>
-                    <p class="prof-ref">Prof. Ragavan K | IIT Gandhinagar | Jan '23 - Apr '23</p>
-                    <div class="card-desc">
-                        <div class="action-block">
-                            <i class="fas fa-cogs"></i>
-                            <span>Designed gate-driver circuit for IGBTs used in Synchronous Reluctance Motor inverters.</span>
-                        </div>
-                        <div class="action-block">
-                            <i class="fas fa-microchip"></i>
-                            <span>Engineered PCB using ISO-5852S Isolated Gate Driver for experimental motor verification.</span>
-                        </div>
+                    <p class="prof-ref">Prof. Ragavan K | IIT Gandhinagar</p>
+                    <div class="focus-grid">
+                        <div class="focus-tag"><i class="fas fa-cogs"></i> IGBT Gate Driver Design</div>
+                        <div class="focus-tag"><i class="fas fa-microchip"></i> ISO-5852S Implementation</div>
                     </div>
                 </div>
 
                 <div class="project-card">
                     <div class="card-top">
                         <h3>IoT Surveillance Car</h3>
-                        <span class="tag">Robotics & IoT</span>
+                        <span class="tag">Robotics</span>
                     </div>
-                    <p class="prof-ref">Prof. Jhuma Saha | IIT Gandhinagar | Jan '23 - Apr '23</p>
-                    <div class="card-desc">
-                        <div class="action-block">
-                            <i class="fas fa-car-side"></i>
-                            <span>Built a controllable Surveillance Car using STM32 microcontroller.</span>
-                        </div>
-                        <div class="action-block">
-                            <i class="fas fa-satellite-dish"></i>
-                            <span>Integrated real-time telemetry (temperature, pressure, coordinates) and live camera feed with remote control access.</span>
-                        </div>
+                    <p class="prof-ref">Prof. Jhuma Saha | IIT Gandhinagar</p>
+                    <div class="focus-grid">
+                        <div class="focus-tag"><i class="fas fa-robot"></i> STM32 Surveillance Robot</div>
+                        <div class="focus-tag"><i class="fas fa-video"></i> Real-time Telemetry & Video</div>
                     </div>
                 </div>
 
