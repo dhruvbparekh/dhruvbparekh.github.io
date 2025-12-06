@@ -1,375 +1,695 @@
-:root {
-    --primary: #BF5700; /* UT Austin Burnt Orange */
-    --dark: #1a1a1a;
-    --light: #f4f4f4;
-    --white: #ffffff;
-    --gray: #666;
-    --shadow: 0 4px 15px rgba(0,0,0,0.08);
-    --border-radius: 12px;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dhruv Bhavesh Parekh | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- CSS STYLES --- */
+        :root {
+            --primary: #BF5700; /* UT Austin Burnt Orange */
+            --dark: #1a1a1a;
+            --light: #f4f4f4;
+            --white: #ffffff;
+            --gray: #666;
+            --shadow: 0 4px 15px rgba(0,0,0,0.08);
+            --border-radius: 12px;
+        }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
 
-body {
-    background-color: #fafafa;
-    color: var(--dark);
-    line-height: 1.6;
-}
+        body {
+            background-color: #fafafa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
 
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-/* Header & Nav */
-header {
-    background: var(--white);
-    padding: 1rem 0;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+        /* Header & Nav */
+        header {
+            background: var(--white);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-nav .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-.logo {
-    font-weight: 800;
-    color: var(--primary);
-    letter-spacing: -1px;
-}
+        .logo {
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: -1px;
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 30px;
+        }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--dark);
-    font-weight: 500;
-    font-size: 0.95rem;
-    transition: color 0.3s;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
 
-.nav-links a:hover {
-    color: var(--primary);
-}
+        .nav-links a:hover {
+            color: var(--primary);
+        }
 
-/* Hero Section */
-#hero {
-    padding: 60px 0;
-    text-align: center;
-    background: var(--white);
-    border-bottom: 1px solid #eee;
-}
+        /* Hero Section */
+        #hero {
+            padding: 60px 0;
+            text-align: center;
+            background: var(--white);
+            border-bottom: 1px solid #eee;
+        }
 
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid var(--white);
-    box-shadow: var(--shadow);
-    margin-bottom: 20px;
-}
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--white);
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+        }
 
-#hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
+        #hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
 
-.subtitle {
-    font-size: 1.2rem;
-    color: var(--gray);
-}
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray);
+        }
 
-.university {
-    color: var(--primary);
-    font-weight: 600;
-    margin-bottom: 25px;
-}
+        .university {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
 
-/* Contact Bar - No lists */
-.contact-bar {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
+        /* Contact Bar */
+        .contact-bar {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
 
-.contact-pill {
-    text-decoration: none;
-    color: var(--dark);
-    padding: 8px 16px;
-    background: #f0f0f0;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
+        .contact-pill {
+            text-decoration: none;
+            color: var(--dark);
+            padding: 8px 16px;
+            background: #f0f0f0;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-.contact-pill:hover {
-    background: #e0e0e0;
-    transform: translateY(-2px);
-}
+        .contact-pill:hover {
+            background: #e0e0e0;
+            transform: translateY(-2px);
+        }
 
-.contact-pill.highlight {
-    background: var(--primary);
-    color: var(--white);
-}
+        .contact-pill.highlight {
+            background: var(--primary);
+            color: var(--white);
+        }
 
-.contact-pill.highlight:hover {
-    background: #a34a00;
-}
+        .contact-pill.highlight:hover {
+            background: #a34a00;
+        }
 
-/* Section Common */
-section {
-    padding: 60px 0;
-}
+        /* Section Common */
+        section {
+            padding: 60px 0;
+        }
 
-.section-title {
-    font-size: 1.8rem;
-    margin-bottom: 40px;
-    position: relative;
-    display: inline-block;
-}
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
 
-.section-title::after {
-    content: '';
-    display: block;
-    width: 60%;
-    height: 4px;
-    background: var(--primary);
-    margin-top: 5px;
-    border-radius: 2px;
-}
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60%;
+            height: 4px;
+            background: var(--primary);
+            margin-top: 5px;
+            border-radius: 2px;
+        }
 
-/* Education - Grid Cards */
-.grid-2 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
-}
+        /* Education - Grid Cards - FIXED ALIGNMENT */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
 
-.edu-card {
-    background: var(--white);
-    padding: 30px;
-    border-radius: var(--border-radius);
-    box-shadow: var(--shadow);
-    border: 1px solid rgba(0,0,0,0.03);
-}
+        .edu-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid rgba(0,0,0,0.03);
+            /* Flex properties to force alignment */
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
 
-.edu-header {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-}
+        .edu-header {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 20px;
+        }
 
-.icon-bg {
-    font-size: 1.5rem;
-    color: var(--primary);
-    background: rgba(191, 87, 0, 0.1);
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-}
+        .edu-body {
+            /* Flex grow allows this section to fill space, pushing stat-box down */
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
 
-.edu-header h3 {
-    font-size: 1.1rem;
-    margin-bottom: 5px;
-}
+        .icon-bg {
+            font-size: 1.5rem;
+            color: var(--primary);
+            background: rgba(191, 87, 0, 0.1);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
 
-.date-badge {
-    font-size: 0.8rem;
-    background: #eee;
-    padding: 2px 8px;
-    border-radius: 4px;
-    color: #666;
-}
+        .edu-header h3 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
 
-.achievement-banner {
-    background: linear-gradient(45deg, #FFD700, #FDB931);
-    color: #4a3b00;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin: 10px 0;
-    display: inline-block;
-}
+        .date-badge {
+            font-size: 0.8rem;
+            background: #eee;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: #666;
+        }
 
-.stat-box {
-    margin-top: 15px;
-    border-top: 1px solid #eee;
-    padding-top: 10px;
-    display: flex;
-    justify-content: space-between;
-    font-weight: 600;
-}
+        .achievement-banner {
+            background: linear-gradient(45deg, #FFD700, #FDB931);
+            color: #4a3b00;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin: 10px 0;
+            display: inline-block;
+            align-self: flex-start;
+        }
 
-/* Experience - Feed Style (No Bullets) */
-.timeline-feed {
-    border-left: 3px solid #eee;
-    padding-left: 30px;
-    margin-left: 10px;
-}
+        .stat-box {
+            /* This pushes the GPA box to the very bottom of the card */
+            margin-top: auto; 
+            border-top: 1px solid #eee;
+            padding-top: 15px; /* Increased padding slightly */
+            display: flex;
+            justify-content: space-between;
+            font-weight: 600;
+        }
 
-.feed-item {
-    position: relative;
-    margin-bottom: 40px;
-}
+        .degree {
+            margin-bottom: 10px;
+        }
 
-.feed-marker {
-    position: absolute;
-    left: -38px; /* Align with border */
-    top: 5px;
-    width: 16px;
-    height: 16px;
-    background: var(--primary);
-    border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 1px #eee;
-}
+        /* Experience - Feed Style */
+        .timeline-feed {
+            border-left: 3px solid #eee;
+            padding-left: 30px;
+            margin-left: 10px;
+        }
 
-.job-header {
-    margin-bottom: 12px;
-}
+        .feed-item {
+            position: relative;
+            margin-bottom: 40px;
+        }
 
-.job-header h3 {
-    font-size: 1.2rem;
-}
+        .feed-marker {
+            position: absolute;
+            left: -38px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: var(--primary);
+            border-radius: 50%;
+            border: 3px solid #fff;
+            box-shadow: 0 0 0 1px #eee;
+        }
 
-.job-header .role {
-    display: block;
-    color: var(--gray);
-    font-weight: 500;
-}
+        .job-header {
+            margin-bottom: 12px;
+        }
 
-.job-header .time {
-    font-size: 0.85rem;
-    color: #999;
-}
+        .job-header h3 {
+            font-size: 1.2rem;
+        }
 
-/* Narrative Text - Replacing Bullets */
-.job-narrative p {
-    margin-bottom: 10px;
-    background: var(--white);
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid rgba(191, 87, 0, 0.2);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.03);
-}
+        .job-header .role {
+            display: block;
+            color: var(--gray);
+            font-weight: 500;
+        }
 
-.job-narrative p strong {
-    color: var(--primary);
-}
+        .job-header .time {
+            font-size: 0.85rem;
+            color: #999;
+        }
 
-/* Projects Masonry */
-.projects-masonry {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-}
+        /* Narrative Text */
+        .job-narrative p {
+            margin-bottom: 10px;
+            background: var(--white);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid rgba(191, 87, 0, 0.2);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
 
-.project-card {
-    background: var(--white);
-    border-radius: var(--border-radius);
-    padding: 25px;
-    box-shadow: var(--shadow);
-    transition: transform 0.3s;
-}
+        .job-narrative p strong {
+            color: var(--primary);
+        }
 
-.project-card:hover {
-    transform: translateY(-5px);
-}
+        /* Projects Masonry */
+        .projects-masonry {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
 
-.card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
+        .project-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+        }
 
-.card-top h3 {
-    font-size: 1.1rem;
-    max-width: 70%;
-}
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
 
-.tag {
-    font-size: 0.7rem;
-    background: var(--dark);
-    color: var(--white);
-    padding: 4px 8px;
-    border-radius: 4px;
-    text-transform: uppercase;
-}
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
 
-.prof-ref {
-    font-size: 0.8rem;
-    color: #888;
-    margin-bottom: 20px;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 10px;
-}
+        .card-top h3 {
+            font-size: 1.1rem;
+            max-width: 70%;
+        }
 
-/* Action Blocks - Creative replacement for bullets in projects */
-.action-block {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 12px;
-    align-items: baseline;
-}
+        .tag {
+            font-size: 0.7rem;
+            background: var(--dark);
+            color: var(--white);
+            padding: 4px 8px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
 
-.action-block i {
-    color: var(--primary);
-    font-size: 0.9rem;
-    min-width: 20px;
-}
+        .prof-ref {
+            font-size: 0.8rem;
+            color: #888;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
 
-.action-block span {
-    font-size: 0.95rem;
-    color: #444;
-}
+        /* Action Blocks */
+        .action-block {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 12px;
+            align-items: baseline;
+        }
 
-/* Skills */
-.skills-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    justify-content: center;
-}
+        .action-block i {
+            color: var(--primary);
+            font-size: 0.9rem;
+            min-width: 20px;
+        }
 
-.skill-pill {
-    background: var(--white);
-    border: 1px solid #e0e0e0;
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    color: #555;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
+        .action-block span {
+            font-size: 0.95rem;
+            color: #444;
+        }
 
-footer {
-    text-align: center;
-    padding: 40px 0;
-    color: #888;
-    font-size: 0.9rem;
-    margin-top: 40px;
-}
+        /* Skills */
+        .skills-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .skill-pill {
+            background: var(--white);
+            border: 1px solid #e0e0e0;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            color: #555;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #888;
+            font-size: 0.9rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">DBP.</h1>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Tools</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="profile-wrapper">
+                    <img src="photo.jpeg" alt="Dhruv Bhavesh Parekh" class="profile-photo">
+                </div>
+                <h1>Dhruv Bhavesh Parekh</h1>
+                <p class="subtitle">Graduate Student | Electrical & Computer Engineering</p>
+                <p class="university">University of Texas at Austin</p>
+                
+                <div class="contact-bar">
+                    <a href="https://linkedin.com/in/dhruv-b-parekh" target="_blank" class="contact-pill"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="resume.pdf" download class="contact-pill highlight"><i class="fas fa-file-download"></i> Resume</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="grid-2">
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <i class="fas fa-university icon-bg"></i>
+                        <div>
+                            <h3>University of Texas at Austin</h3>
+                            <span class="date-badge">Aug '24 - May '26</span>
+                        </div>
+                    </div>
+                    <div class="edu-body">
+                        <p class="degree">MSE | Electrical & Computer Engineering</p>
+                        <p class="specialization">Power Electronics & Power Systems</p>
+                        <div class="stat-box">
+                            <span class="stat-label">GPA</span>
+                            <span class="stat-value">4.0 / 4.0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="edu-card">
+                    <div class="edu-header">
+                        <i class="fas fa-graduation-cap icon-bg"></i>
+                        <div>
+                            <h3>IIT Gandhinagar</h3>
+                            <span class="date-badge">Aug '20 - May '24</span>
+                        </div>
+                    </div>
+                    <div class="edu-body">
+                        <p class="degree">B.Tech | Electrical Engineering</p>
+                        <div class="achievement-banner">
+                            <i class="fas fa-medal"></i> Institute Gold Medalist
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-label">GPA</span>
+                            <span class="stat-value">9.26 / 10</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Work Experience</h2>
+            <div class="timeline-feed">
+                
+                <div class="feed-item">
+                    <div class="feed-marker"></div>
+                    <div class="feed-content">
+                        <div class="job-header">
+                            <h3>Texas Instruments</h3>
+                            <span class="role">Systems Engineering Intern | ASM - AUTO</span>
+                            <span class="time">Jun '25 - Aug '25</span>
+                        </div>
+                        <div class="job-narrative">
+                            <p>Spearheaded <strong>motor-control algorithm design</strong> and validation within MATLAB Simulink, successfully implementing solutions on F29 series micro-controllers.</p>
+                            <p>Engineered a robust <strong>test-bed</strong> for comparative evaluation against SVPWM, covering a wide range of test conditions to ensure system reliability.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-item">
+                    <div class="feed-marker"></div>
+                    <div class="feed-content">
+                        <div class="job-header">
+                            <h3>University of Texas at Austin</h3>
+                            <span class="role">Graduate Research Assistant | Prof. Brian Johnson</span>
+                            <span class="time">Jan '25 - Present</span>
+                        </div>
+                        <div class="job-narrative">
+                            <p>Currently designing a comprehensive <strong>GFM verification testbed experiment</strong> capable of executing frequency sweep tests on diverse devices to rigorously verify functionality.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-item">
+                    <div class="feed-marker"></div>
+                    <div class="feed-content">
+                        <div class="job-header">
+                            <h3>MITACS Globalink | Univ. of Waterloo</h3>
+                            <span class="role">Research Intern | Prof. Sahar Azad</span>
+                            <span class="time">May '23 - Jul '23</span>
+                        </div>
+                        <div class="job-narrative">
+                            <p>Designed and implemented complex control loops for <strong>Voltage-Sourced-Converters</strong> based Grid Forming Inverters in PSCAD.</p>
+                            <p>Executed simulations to run comparative analysis of <strong>droop control methods</strong>, optimizing for transient time and steady-state error.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="feed-item">
+                    <div class="feed-marker"></div>
+                    <div class="feed-content">
+                        <div class="job-header">
+                            <h3>IIT Bombay</h3>
+                            <span class="role">Research Intern | Prof. Zakir Rather</span>
+                            <span class="time">May '22 - Jul '22</span>
+                        </div>
+                        <div class="job-narrative">
+                            <p>Collaborated on a pilot project to deploy <strong>Street-Pole based Charging</strong> for EVs.</p>
+                            <p>Developed an <strong>Arduino-based circuit</strong> to handle Pilot and Proximity checks for J-1772 based EVSE.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Key Projects</h2>
+            <div class="projects-masonry">
+                
+                <div class="project-card">
+                    <div class="card-top">
+                        <h3>2-Stage Miller Compensated OTA Design</h3>
+                        <span class="tag">Analog IC Design</span>
+                    </div>
+                    <p class="prof-ref">Prof. Yaoyao Jia | UT Austin | Aug '25 - Present</p>
+                    <div class="card-desc">
+                        <div class="action-block">
+                            <i class="fas fa-microchip"></i>
+                            <span>Complete design of a 2-stage OTA meeting strict requirements for output swing, DC gain, and transient performance.</span>
+                        </div>
+                        <div class="action-block">
+                            <i class="fas fa-wave-square"></i>
+                            <span>Conducted Cadence simulations to verify design stability under various step changes in input.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <h3>MPC of a Boost Converter</h3>
+                        <span class="tag">Optimal Control</span>
+                    </div>
+                    <p class="prof-ref">Prof. Sandeep Chinchali | UT Austin | Aug '25 - Dec '25</p>
+                    <div class="card-desc">
+                        <div class="action-block">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Comparative analysis of LQR, iLQR, and QP in MPC against standard PID Control via PLECS simulation.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <h3>Boost Converter PCB Design & Control</h3>
+                        <span class="tag">Power Electronics</span>
+                    </div>
+                    <p class="prof-ref">Prof. Brian Johnson | UT Austin | Aug '24 - Present</p>
+                    <div class="card-desc">
+                        <div class="action-block">
+                            <i class="fas fa-pencil-ruler"></i>
+                            <span>End-to-end design involving device selection, inductor design, and PCB layout.</span>
+                        </div>
+                        <div class="action-block">
+                            <i class="fas fa-bolt"></i>
+                            <span>Achieved <strong>98% efficiency</strong> (highest in class) with minimized converter size.</span>
+                        </div>
+                        <div class="action-block">
+                            <i class="fas fa-tachometer-alt"></i>
+                            <span>Implemented Peak-Curve control and tested dynamic performance under load changes.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <h3>Inverter Modulation Techniques</h3>
+                        <span class="tag">Embedded Systems</span>
+                    </div>
+                    <p class="prof-ref">Prof. Ragavan K | IIT Gandhinagar | Jan '24 - Apr '24</p>
+                    <div class="card-desc">
+                        <div class="action-block">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Implemented various PWM Techniques on STM32 to reduce Total Harmonic Distortion (THD).</span>
+                        </div>
+                        <div class="action-block">
+                            <i class="fas fa-flask"></i>
+                            <span>Conducted experimental and simulation-based comparisons to isolate the most effective PWM technique.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <h3>Gate Driver Circuit for SynRM</h3>
+                        <span class="tag">Hardware Design</span>
+                    </div>
+                    <p class="prof-ref">Prof. Ragavan K | IIT Gandhinagar | Jan '23 - Apr '23</p>
+                    <div class="card-desc">
+                        <div class="action-block">
+                            <i class="fas fa-cogs"></i>
+                            <span>Designed gate-driver circuit for IGBTs used in Synchronous Reluctance Motor inverters.</span>
+                        </div>
+                        <div class="action-block">
+                            <i class="fas fa-microchip"></i>
+                            <span>Engineered PCB using ISO-5852S Isolated Gate Driver for experimental motor verification.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="card-top">
+                        <h3>IoT Surveillance Car</h3>
+                        <span class="tag">Robotics & IoT</span>
+                    </div>
+                    <p class="prof-ref">Prof. Jhuma Saha | IIT Gandhinagar | Jan '23 - Apr '23</p>
+                    <div class="card-desc">
+                        <div class="action-block">
+                            <i class="fas fa-car-side"></i>
+                            <span>Built a controllable Surveillance Car using STM32 microcontroller.</span>
+                        </div>
+                        <div class="action-block">
+                            <i class="fas fa-satellite-dish"></i>
+                            <span>Integrated real-time telemetry (temperature, pressure, coordinates) and live camera feed with remote control access.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Tools & Frameworks</h2>
+            <div class="skills-wrapper">
+                <span class="skill-pill">PSCAD</span>
+                <span class="skill-pill">MATLAB</span>
+                <span class="skill-pill">Simulink</span>
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">LTSpice</span>
+                <span class="skill-pill">Arduino</span>
+                <span class="skill-pill">Verilog</span>
+                <span class="skill-pill">LabVIEW</span>
+                <span class="skill-pill">KiCad</span>
+                <span class="skill-pill">PLECS</span>
+                <span class="skill-pill">STM32</span>
+                <span class="skill-pill">TCAD</span>
+                <span class="skill-pill">Cadence</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dhruv Bhavesh Parekh.</p>
+        </div>
+    </footer>
+</body>
+</html>
